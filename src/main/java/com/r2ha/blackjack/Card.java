@@ -1,7 +1,5 @@
 package com.r2ha.blackjack;
 
-import static org.fusesource.jansi.Ansi.ansi;
-
 public class Card {
     private final Suit suit;
     private final Rank rank;
@@ -12,22 +10,22 @@ public class Card {
     }
 
     public int rankValue() {
-        return getRank().value();
+        return rank().value();
     }
 
-    public Rank getRank() {
+    public Rank rank() {
         return rank;
     }
 
-    public Suit getSuit() {
+    public Suit suit() {
         return suit;
     }
 
     @Override
     public String toString() {
         return "Card {" +
-                "suit=" + getSuit() +
-                ", rank=" + getRank() +
+                "suit=" + suit +
+                ", rank=" + rank +
                 '}';
     }
 
@@ -39,13 +37,13 @@ public class Card {
         Card card = (Card) o;
 
         if (!suit.equals(card.suit)) return false;
-        return getRank().equals(card.rank);
+        return rank().equals(card.rank);
     }
 
     @Override
     public int hashCode() {
         int result = suit.hashCode();
-        result = 31 * result + getRank().hashCode();
+        result = 31 * result + rank.hashCode();
         return result;
     }
 }
