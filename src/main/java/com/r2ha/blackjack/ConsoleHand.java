@@ -15,8 +15,4 @@ public class ConsoleHand {
                    .collect(Collectors.joining(
                             ansi().cursorUp(6).cursorRight(1).toString()));
     }
-
-    static String displayValue(Integer value) {
-        return String.valueOf(value);
-    }
 }

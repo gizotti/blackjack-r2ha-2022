@@ -28,15 +28,4 @@ public class HandDisplayTest {
         assertThat(ConsoleHand.cardsAsString(hand))
                 .isEqualTo("[31m┌─────────┐[1B[11D│A        │[1B[11D│         │[1B[11D│    ♥    │[1B[11D│         │[1B[11D│        A│[1B[11D└─────────┘[6A[1C[30m┌─────────┐[1B[11D│J        │[1B[11D│         │[1B[11D│    ♣    │[1B[11D│         │[1B[11D│        J│[1B[11D└─────────┘");
     }
-
-    @Test
-    void valueAsStringReturnsTheHandValueAsAString() throws Exception {
-        List<Card> cards = List.of(
-                new Card(Suit.HEARTS, Rank.TWO),
-                new Card(Suit.CLUBS, Rank.THREE));
-        Hand hand = new Hand(cards);
-
-        assertThat(ConsoleHand.displayValue(hand.value()))
-                .isEqualTo("5");
-    }
 }

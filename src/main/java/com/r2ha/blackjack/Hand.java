@@ -3,8 +3,6 @@ package com.r2ha.blackjack;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.fusesource.jansi.Ansi.ansi;
-
 public class Hand {
     private final List<Card> cards = new ArrayList<>();
 
@@ -60,9 +58,5 @@ public class Hand {
 
     boolean beats(Hand hand) {
         return hand.value() < value();
-    }
-
-    public boolean valueEquals(int target) {
-        return value() == target;
     }
 }
