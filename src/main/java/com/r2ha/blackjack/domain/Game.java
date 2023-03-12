@@ -10,14 +10,17 @@ import java.util.Scanner;
 import static org.fusesource.jansi.Ansi.ansi;
 
 public class Game {
-
     private static final PrintStream out = System.out;
+    private static Scanner scanner;
+
     private final Deck deck;
 
     private final Hand dealerHand = new Hand();
     private final Hand playerHand = new Hand();
 
     public static void main(String[] args) {
+        scanner = new Scanner(System.in);
+
         displayWelcomeScreen();
         waitForEnterFromUser();
 
@@ -45,7 +48,6 @@ public class Game {
                                    .cursor(3, 1)
                                    .fgBrightBlack().a("Hit [ENTER] to start..."));
 
-        Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
     }
 
@@ -130,7 +132,6 @@ public class Game {
 
     private String inputFromPlayer() {
         consoleOut().println("[H]it or [S]tand?");
-        Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
     }
 
