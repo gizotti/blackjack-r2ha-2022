@@ -1,5 +1,6 @@
-package com.r2ha.blackjack;
+package com.r2ha.blackjack.domain;
 
+import com.r2ha.blackjack.adapter.in.console.ConsoleCard;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
