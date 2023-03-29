@@ -10,7 +10,7 @@ import java.util.Scanner;
 import static org.fusesource.jansi.Ansi.ansi;
 
 public class Game {
-    private static final PrintStream out = System.out;
+    private static  PrintStream out = System.out;
     private static Scanner scanner;
 
     private final Deck deck;
@@ -29,6 +29,9 @@ public class Game {
         resetScreen();
     }
 
+    public static void directOutputTo(PrintStream printStream) {
+        out = printStream;
+    }
     private static PrintStream consoleOut() {
         return out;
     }
